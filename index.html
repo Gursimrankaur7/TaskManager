@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</head>
+
+<body>
+  <div class="heading">
+    <h3 class="heartbeat">TASK MANAGER</h3>
+  </div>
+  <div class="main">
+    <div>
+      <div class="todo-input">
+        <span>Schedule Task: </span>
+        <input type="text" placeholder="Enter new task">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Add Category: </span>
+        <input type="text" placeholder="Enter new category" list="categoryList">
+        <br><br>
+        <datalist id="categoryList">
+          <option value="Personal"></option>
+          <option value="Work"></option>
+          <option value="Shopping"></option>
+        </datalist>
+        <span>Schedule Date:</span>
+        <input type="date" id="dateInput">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Schedule Time:</span>
+        <input type="time" id="timeInput">
+        <span></span>
+        <span></span>
+        <button id="addBtn">ADD</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="sortBtn">SORT BY DATE</button>
+
+      </div>
+
+      <div class="tablee">
+        <table id="todoTable" class="content-table">
+          <tr class="firstRow">
+            <td>
+              <span class="material-symbols-rounded"> select_check_box </span>
+            </td>
+            <td>Scheduled Date</td>
+            <td>Scheduled Time</td>
+            <td>To Do!</td>
+            <td>
+              <select id="categoryFilter"></select>
+            </td>
+            <td>
+              <span class="material-symbols-outlined"> delete_forever </span>
+            </td>
+          </tr>
+          <div class="second">
+
+          </div>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
